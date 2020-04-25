@@ -1,19 +1,21 @@
-number = 107
+#number = 5
 # Add  code here!
-def prime(number)
+def prime?(number)
   num = number - 1
   range = (2..num)
   checklist = range.to_a
   n = number
   check_array = []
 #  number.each do |n|
-    if n.even?
+    if n < 2 
+      return false
+    elsif n.even?
       if n == 2 
-        puts "its 2 so true"
-        true 
+#        puts "its 2 so true"
+        return true 
       else
-        puts "its not 2 so false"
-        false
+#        puts "its not 2 so false"
+        return false
       end
     elsif  
       n.odd?
@@ -34,7 +36,15 @@ def prime(number)
      end
       
 #    end
-    puts  check_array
+    final_output = check_array.include?(false)
+    if final_output == false
+#      puts "a prime"
+      return true
+    else
+#      puts "not a prime"
+      return false
+    end
+    puts final_output
 end
 
-prime(number)
+#prime(number)
