@@ -1,13 +1,23 @@
 # Add  code here!
-require 'prime'
+# require 'prime'
 
-def prime?(integer)
+# def prime?(integer)
  
+# end
+
+
+# prime?(1)
+
+def prime?(int)
+ array = (2..int-1)
+ if int > 1
+   array.none? do |integer|
+     int % integer == 0 
+   end
+ else
+   false 
+ end
 end
-
-
-prime?(1)
-
 
 
 
