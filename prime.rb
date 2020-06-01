@@ -6,8 +6,9 @@ def prime?(number)
       true 
     else 
       (2..number/2).each do |n| 
-      return false if number % n == 0 
-      end 
+        if number % n == 0 
+            false
+        end 
       true
     end 
 end 
